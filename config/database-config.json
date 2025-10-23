@@ -1,22 +1,41 @@
 {
-  "connection": {
-    "host": "prod-db.example.com",
-    "port": 5432,
-    "database": "devops_production",
-    "username": "prod_admin",
-    "ssl_mode": "require",
-    "pool_size": 20,
-    "timeout": 30
-  },
-  "backup": {
-    "enabled": true,
-    "schedule": "0 2 * * *",
-    "retention_days": 30,
-    "location": "/backups/database"
-  },
-  "replication": {
-    "enabled": true,
-    "replicas": 2,
-    "sync_mode": "synchronous"
-  }
+"connection": {
+"host": "prod-db.example.com",
+"port": 5432,
+"database": "devops_production",
+"username": "prod_admin",
+"password": "dev_password",
+"ssl_mode": "require",
+"pool_size": 20,
+"timeout": 30,
+"dev_host": "localhost",
+"dev_database": "devops_development",
+"dev_username": "dev_user",
+"dev_ssl_mode": "disable",
+"dev_pool_size": 5,
+"dev_timeout": 10
+},
+"backup": {
+"enabled": true,
+"schedule": "0 2 * * *",
+"retention_days": 30,
+"location": "/backups/database",
+"dev_enabled": false,
+"dev_schedule": "manual",
+"dev_retention_days": 7,
+"dev_location": "/tmp/backups"
+},
+"replication": {
+"enabled": true,
+"replicas": 2,
+"sync_mode": "synchronous",
+"dev_enabled": false,
+"dev_replicas": 0,
+"dev_sync_mode": "asynchronous"
+},
+"development": {
+"seed_data": true,
+"reset_on_restart": true,
+"debug_queries": true
+}
 }

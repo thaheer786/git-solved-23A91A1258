@@ -1,25 +1,46 @@
-# Production Application Configuration
+# Unified Application Configuration
+
 application:
-  name: DevOpsSimulator
-  version: 1.0.0
-  environment: production
-  
+name: DevOpsSimulator
+version: 2.0.0
+environment: production_and_development
+
 server:
-  host: 0.0.0.0
-  port: 8080
-  ssl_enabled: true
-  
+host: 0.0.0.0
+port: 8080
+ssl_enabled: true
+hot_reload: false
+dev_host: localhost
+dev_port: 3000
+
 logging:
-  level: INFO
-  format: json
-  output: /var/log/app.log
-  
+level: INFO
+format: json
+output: /var/log/app.log
+dev_level: DEBUG
+dev_format: pretty
+dev_output: console
+show_stack_trace: true
+
 database:
-  host: prod-db.example.com
-  port: 5432
-  name: devops_prod
-  
+host: prod-db.example.com
+port: 5432
+name: devops_prod
+dev_host: localhost
+dev_name: devops_dev
+
 features:
-  auto_scaling: true
-  load_balancer: enabled
-  backup_enabled: true
+auto_scaling: true
+load_balancer: enabled
+backup_enabled: true
+experimental_features: true
+
+development:
+mock_external_apis: true
+debug_mode: true
+cors_enabled: true
+
+notifications:
+slack_webhook: "[https://hooks.slack.com/services/XXX](https://hooks.slack.com/services/XXX)"
+discord_webhook: "[https://discord.com/api/webhooks/YYY](https://discord.com/api/webhooks/YYY)"
+email_alerts: false
