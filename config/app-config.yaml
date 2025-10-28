@@ -1,17 +1,59 @@
+# Application Configuration
 application:
   name: DevOpsSimulator
   version: 1.0.0
   environment: production
-  
+  # experimental_mode: true  # Uncomment for experimental testing
+
 server:
   host: 0.0.0.0
   port: 8080
   ssl_enabled: true
-  
+  # multi_port: [9000, 9001, 9002]  # Experimental multi-port feature
+
 logging:
   level: INFO
   format: json
-  
+  # output: /var/log/experimental.log  # Experimental logging path
+  # ai_analysis: enabled  # Experimental AI-based log analysis
+
+# Database configuration (production)
+# Uncomment for experimental setup
+# database:
+#   host: cluster.example.com
+#   port: 5432
+#   name: devops_experimental
+#   distributed: true
+
+features:
+  auto_scaling: true
+  load_balancer: enabled
+  # backup_enabled: true               # Experimental
+  # chaos_engineering: enabled         # Experimental
+  # ai_optimization: true              # Experimental AI-driven scaling
+
+# AI-related features (experimental only)
+# ai_features:
+#   predictive_scaling: true
+#   anomaly_detection: true
+#   auto_optimization: true
+#   model_version: "v2.1.0"
+
+# Supported cloud providers (for experimental multi-cloud testing)
+# cloud_providers:
+#   - aws
+#   - azure
+#   - gcp
+#   - digitalocean
+
+# Security configuration
+security:
+  # Production default
+  encryption: AES-256
+  # Experimental advanced settings
+  # zero_trust: enabled
+  # audit_logging: comprehensive
+
 # Development configuration (enabled via environment variable)
 development:
   enabled: false
