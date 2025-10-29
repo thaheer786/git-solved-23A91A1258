@@ -1,0 +1,32 @@
+* 292b8b8 (HEAD -> main, origin/main) docs: Add changelog
+* 1ff86ee docs: Add Git Journey documentation
+* bc2b94a docs: logged tag creation
+* 19e44aa (tag: v1.1.0, tag: v1.0.0) docs: recorded reset and revert usage
+* 9328025 Add main update
+* 5470ad0 docs: Add FAQ section
+| * 59d5a8d (feature/merge-test) Add feature work
+| * a22c6a2 (feature/another-feature) Bad commit
+| | * 7ee1601 (origin/feature/another-feature) resolve: merge conflict in README.md
+| |/  
+| * 8c70a6a docs: Add FAQ section
+| * f7bae50 updating conflict-simulator
+| * ce83ee5 Add package-lock.json after dependency install
+| * 4771b70 updating dev
+| | * fd8eb26 (feature/new-feature) docs: Update CHANGELOG for Step 4.2 (stash)
+| | * 14514e2 (origin/feature/new-feature) feat: Add new feature
+| |/  
+|/|   
+* |   4670326 merge: Resolve all conflicts between main and conflict branches
+|\ \  
+| * | d3dd9b2 (instructor/conflict-simulator, conflict-simulator) updating conflict-simulator
+* | | e8ae618 Add package-lock.json after dependency install
+* | |   7616df0 merge: Resolve all conflicts between main and dev branches
+|\ \ \  
+| |_|/  
+|/| |   
+| * | 02011a5 (instructor/dev, dev) updating dev
+| |/  
+* | 0312c6f (instructor/main, instructor/HEAD) updating main
+* | fadfd24 Revise README for DevOps Simulator project
+|/  
+* ae630eb Initial commit
